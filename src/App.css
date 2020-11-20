@@ -14,3 +14,10 @@ body {
 .App {
   flex-wrap: wrap;
 }
+
+.col-xs-12,
+col-sm-12,
+col-md-6,
+col-lg-4 {
+  border: 5px solid #f9f8fd !important;
+}
