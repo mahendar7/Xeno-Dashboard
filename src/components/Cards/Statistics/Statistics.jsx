@@ -84,10 +84,12 @@ class Statistics extends Component {
       }
     render() {
         return (
-            <div className="topProducts bg-white border p-4 mx-2 my-2 mt-0 col-xs-12 col-sm-12 col-md-7">
-                <TitleSection title='Sales Statistics'/>
-                <hr/>
-                <ReactApexChart options={this.state.options} series={this.state.series} type="bar" height={350} />
+            <div className="topProducts bg-white border p-4 col-xs-12 col-sm-12 col-md-6 col-lg-8">
+                <div className="mx-2">
+                  <TitleSection title='Sales Statistics'/>
+                  <hr/>
+                  <ReactApexChart options={this.state.options} series={this.state.series} type="bar" height={350} />
+              </div>
             </div>
         )
     }

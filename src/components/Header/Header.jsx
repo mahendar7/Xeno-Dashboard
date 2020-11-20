@@ -7,16 +7,24 @@ import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 import LanguageIcon from '@material-ui/icons/Language';
 import AppsIcon from '@material-ui/icons/Apps';
 import './Header.css'
+import MenuIcon from '@material-ui/icons/Menu';
 
-function Header() {
+function Header({props}) {
+
+    const handleSidebarToggle = (e) =>{
+        e.preventDefault()
+        // setsideBarOpened(!sideBarOpened)
+    }
     return (
         <div className="header bg-white d-flex justify-content-between align-items-center p-2">
-            <div className="d-flex justify-content-between align-items-center">
+            <div className="d-md-flex justify-content-between align-items-center d-none ">
                 <button className=" btn btn-light text-primary">Pages <ExpandMoreIcon/></button>
                 <button className="btn">Reports <ExpandMoreIcon/></button>
                 <button className="btn">Apps <ExpandMoreIcon/></button>
             </div>
-            <div className="d-flex justify-content-between align-items-center">
+            <div className="d-flex justify-content-between align-items-center header-right">
+                <MenuIcon className="menuIcon ml-2 mr-3 cursor-pointer d-sm-none d-md-none d-xs-block" onClick={handleSidebarToggle}/>
+
                 <SearchIcon className="mr-3"/>
                 <Badge color="primary" variant="dot" className="mr-3">
                     <NotificationsNoneIcon/>

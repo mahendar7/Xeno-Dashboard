@@ -41,14 +41,16 @@ import './TotalOrdersCard.css'
 
     render() {
         return (
-            <div className="total-orders-card bg-white border p-4 mx-2 my-2 mt-0 col-xs-12 col-sm-6 col-md-4">
-                <TitleSection title='Total Orders'/>
+            <div className="total-orders-card bg-white p-4 col-xs-12 col-sm-6 col-md-4">
+                <div className="mx-2">
+                  <TitleSection title='Total Orders'/>
 
-                <div className="body-section d-flex justify-content-between align-items-center p-2">
-                    <h5 className=" bg-strike">17M</h5>
-                    <div className="progress-bars d-flex justify-content-between">
-                        <ReactApexChart options={this.state.options} series={this.state.series} type="line" height={140} />
-                    </div>
+                  <div className="body-section d-flex justify-content-between align-items-center p-2">
+                      <h5 className=" bg-strike">17M</h5>
+                      <div className="progress-bars d-flex justify-content-between">
+                          <ReactApexChart options={this.state.options} series={this.state.series} type="line" height={140} />
+                      </div>
+                  </div>
                 </div>
             </div>
         )

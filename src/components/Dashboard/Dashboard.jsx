@@ -24,7 +24,7 @@ function Dashboard() {
                     <span className="mr-2 text-muted">.</span>
                     <h6 className="text-muted">Navy Aside</h6>
                 </div>
-                <div>
+                <div className="d-none d-md-block">
                     <button className="btn btn-primary mr-4">Today: Aug 18 <EventNoteIcon/></button>
                 </div>
             </div>
@@ -33,10 +33,6 @@ function Dashboard() {
                 <SalesCard/>
                 <TechnologiesCard/>
                 <TotalOrdersCard/>
-            </div>
-            
-
-            <div className="6-cards my-3 mx-2 row">
                 <Announcements mainTitle="Announcements" 
                     paragraph="To start a blog think of a topic about and first brainstarm part is ways to write details<"
                     bodyTitle="Incredibly Positive Reviews"
@@ -48,6 +44,11 @@ function Dashboard() {
                     <Schedule
                 />
             </div>
+            
+
+            {/* <div className="6-cards my-3 mx-2 row">
+                
+            </div> */}
 
 
             <div className="2-cards my-3 mx-2 row">

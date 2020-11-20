@@ -39,7 +39,7 @@ function Sidebar() {
 
 
     return (
-        <div className={['sidebar', 'bg-dark','text-white', !sideBarOpened && 'smallBar'].join(' ')} >
+        <div className={['sidebar', 'bg-dark','text-white','d-none', 'd-sm-block', !sideBarOpened && 'smallBar'].join(' ')} >
             <div className="bg-black-1 d-flex justify-content-between align-items-center  py-2 px-3">
                 {sideBarOpened && <img src="/logo.jpg" alt="logo" className="logo cursor-pointer"/>}
                     <MenuIcon className="menuIcon cursor-pointer" onClick={handleSidebarToggle}/>
@@ -61,8 +61,8 @@ function Sidebar() {
                 </div>
 
                 {sideBarOpened && (arrowClicked && 
-                    ([1,2,3].map((item) => (
-                    <div className="select-option cursor-pointer d-flex justify-content-around align-items-center p-2">
+                    ([1,2,3].map((item,index) => (
+                    <div className="select-option cursor-pointer d-flex justify-content-around align-items-center p-2" key={index}>
                         <span>.</span>
                         <span>Navy Aside {item}</span>
                     </div>
@@ -76,7 +76,7 @@ function Sidebar() {
             
             <div className="components  mb-3">
                 {menu1.map((item) => (
-                    <ListItem data={item} sideBarOpened={sideBarOpened}/>
+                    <ListItem data={item} sideBarOpened={sideBarOpened} key={item.title}/>
                 ))}
             </div>
 
@@ -84,7 +84,7 @@ function Sidebar() {
 
             <div className="components">
                 {menu2.map((item) => (
-                    <ListItem data={item} sideBarOpened={sideBarOpened}/>
+                    <ListItem data={item} sideBarOpened={sideBarOpened} key={item.title}/>
                 ))}
             </div>
         </div>
