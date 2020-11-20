@@ -1,0 +1,30 @@
+.sidebar {
+  flex: 0.15;
+  height: 100vh;
+}
+
+.smallBar {
+  flex: 0.03;
+}
+
+.logo {
+  max-width: 200px;
+  height: 40px;
+}
+
+/* .menuIcon {
+  max-width: 200px;
+  height: 400px;
+} */
+
+.bg-black-2 {
+  background-color: #83868d;
+}
+
+.bg-black-1 {
+  background-color: #232939;
+}
+
+.dot {
+  font-size: 100px;
+}

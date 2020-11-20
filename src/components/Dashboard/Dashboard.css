@@ -1,0 +1,10 @@
+.dashboard {
+  flex: 1;
+  background-color: #f9f8fd;
+  overflow: scroll;
+  height: 100vh;
+}
+
+.dashboard::-webkit-scrollbar {
+  display: none;
+}

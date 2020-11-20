@@ -1,0 +1,13 @@
+.fbg-strike {
+  /* background-color: red; */
+  background-image: url("../strikes-no-bg.png");
+  background-size: cover;
+  background-position: center;
+  object-fit: contain;
+  height: 100px;
+  width: 100px;
+}
+
+.dot-2 {
+  font-size: 30px;
+}
