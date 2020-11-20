@@ -9,11 +9,11 @@ import AppsIcon from '@material-ui/icons/Apps';
 import './Header.css'
 import MenuIcon from '@material-ui/icons/Menu';
 
-function Header({props}) {
+function Header(props) {
 
     const handleSidebarToggle = (e) =>{
         e.preventDefault()
-        // setsideBarOpened(!sideBarOpened)
+        props.setsideBarOpened(!props.sideBarOpened)
     }
     return (
         <div className="header bg-white d-flex justify-content-between align-items-center p-2">

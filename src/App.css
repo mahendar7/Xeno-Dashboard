@@ -22,28 +22,31 @@ col-lg-4 {
   border: 5px solid #f9f8fd !important;
 }
 
+
 @media screen and (max-width: 600px) {
-  .sidebar {
-    position: fixed;
-    z-index: 5;
+
+  .sidebar{
+      position:fixed;
+      z-index: 5;
   }
 
-  .sidebar * {
-    z-index: 7;
+  .sidebar *{
+      z-index:7;
   }
 
-  .sidebar:after {
-    content: "";
-    background: rgba(0, 0, 0, 0.3);
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    position: fixed;
+  .sidebar:after{
+      content:"";
+      background:rgba(0,0,0,0.3);
+      width:100%;
+      height:100%;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      position: fixed;
   }
 
   .sidebar.smallBar {
-    display: none;
-  }
+      display:none;
+  }    
+
 }

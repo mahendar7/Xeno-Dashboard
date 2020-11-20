@@ -16,9 +16,8 @@ import TableChartIcon from '@material-ui/icons/TableChart';
 import ExploreIcon from '@material-ui/icons/Explore';
 import { Tooltip } from '@material-ui/core';
 
-function Sidebar() {
+function Sidebar({sideBarOpened, setsideBarOpened}) {
     const [arrowClicked, setArrowClicked] = useState(true);
-    const [sideBarOpened, setsideBarOpened] = useState(true);
 
     const handleArrowClick = (e) =>{
         e.preventDefault()
@@ -39,7 +38,7 @@ function Sidebar() {
 
 
     return (
-        <div className={['sidebar', 'bg-dark','text-white','d-none', 'd-sm-block', !sideBarOpened && 'smallBar'].join(' ')} >
+        <div className={['sidebar', 'bg-dark','text-white', 'hidden-xs', 'd-sm-block', !sideBarOpened && 'smallBar'].join(' ')} >
             <div className="bg-black-1 d-flex justify-content-between align-items-center  py-2 px-3">
                 {sideBarOpened && <img src="/logo.jpg" alt="logo" className="logo cursor-pointer"/>}
                     <MenuIcon className="menuIcon cursor-pointer" onClick={handleSidebarToggle}/>

@@ -11,10 +11,11 @@ import Schedule from '../Cards/Schedule/Schedule';
 import TopProducts from '../Cards/TopProducts/TopProducts';
 import Statistics from '../Cards/Statistics/Statistics';
 
-function Dashboard() {
+function Dashboard(props) {
+    
     return (
         <div className="dashboard w-100">
-            <Header/>
+            <Header sideBarOpened={props.sideBarOpened} setsideBarOpened={props.setsideBarOpened}/>
             <div className="hero d-flex justify-content-between align-items-center my-3">
                 <div className="d-flex px-4">
                     <h5 className="mr-3">Dashboard</h5>
